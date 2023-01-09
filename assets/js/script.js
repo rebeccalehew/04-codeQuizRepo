@@ -47,6 +47,21 @@ var myQuestions = [
     }
 ];
 
+// How to make timer shown in window?
+// var timer = setInterval(function() {}, 1000);
+
+// function setTime() {
+// 	var timerInterval = setInterval(function() {
+// 		secondsLeft--;
+// 		timerInterval.textContent = secondsLeft;
+
+// 		if(secondsLeft === 0) {
+// 			clearInterval(timerInterval);
+// 			sendMessage();
+// 		}
+
+// 	}, 1000);
+// }
 
 // functions to generate the quiz for the user to complete
 function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
