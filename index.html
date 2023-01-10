@@ -5,14 +5,36 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Coding Quiz</title>        <!-- CSS file link -->
+        <title>Coding Quiz</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./assets/css/style.css"/>
     </head>
 
-    <body>
+    <body>    
+        <!-- Start quiz button -->
+        <div class="start-btn">
+            <button>start quiz</button>
+        </div>
+        <!-- Info Box -->
+        <div class="info-box">
+            <div class="info-title">
+                <span>Coding Quiz Challenge</span>
+            </div>
+            <div class="info-list">
+                <div class="info">1. You will only have <span>15 seconds</span> per question.</div>
+                <div class="info">2. Select your answer. Correct responses add points. Incorrect responses deduct points.</div>
+                <div class="info">3. When all questions are answered, you can save your initials and score.</div>
+                <div class="info">4. May the odds be ever in your favor!</div>
+            </div>
+            <div class="continue-btn"><button>let's go!</button></div>
+        </div>
+        <!-- Quiz questions -->
         <div id="quiz"></div>
+        <!-- Get results -->
         <button id="submit">Get Results</button>
+        <!-- Show results, enter initials, save score -->
         <div id="results"></div>
+        <!-- External JavaScript file link -->
         <script src="./assets/js/script.js"></script>
     </body>
 

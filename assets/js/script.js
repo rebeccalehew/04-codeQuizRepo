@@ -3,45 +3,35 @@ var myQuestions = [
     {
         question: "Where does the JavaScript tag go in the HTML file?",
         answers: {
-            a: 'head',
-            b: 'body',
-            c: 'both'
+            a: 'head', b: 'body', c: 'both'
         },
         correctAnswer: 'b'
     },
     {
         question: "A ___ is a container for storing data or data values.",
         answers: {
-            a: 'function',
-            b: 'operator',
-            c: 'variable'
+            a: 'function', b: 'operator', c: 'variable'
         },
         correctAnswer: 'c'
     },
     {
         question: "Which symbol is used to invoke a function?",
         answers: {
-            a: '()',
-            b: '{}',
-            c: '[]'
+            a: '()', b: '{}', c: '[]'
         },
         correctAnswer: 'a'
     },
     {
         question: "What is one way to loop through an array?",
         answers: {
-            a: 'const loop',
-            b: 'let loop',
-            c: 'for loop'
+            a: 'const loop', b: 'let loop', c: 'for loop'
         },
         correctAnswer: 'c'
     },
     {
         question: "Which operator is defined as equal to?",
         answers: {
-            a: '===',
-            b: '==',
-            c: '>='
+            a: '===', b: '==', c: '>='
         },
         correctAnswer: 'b'
     }
