@@ -1,11 +1,16 @@
+// getting all my information
+var startBtn = document.querySelector('.startBtn button');
+var infoBox = document.querySelector('.infoBox');
+var continueBtn = infoBox.querySelector('.buttons');
+
 // questions for coding quiz
 var myQuestions = [
     {
         question: "Where does the JavaScript tag go in the HTML file?",
         answers: {
             a: 'head',
-            b: 'body',
-            c: 'both'
+			b: 'body',
+			c: 'both'
         },
         correctAnswer: 'b'
     },
@@ -13,8 +18,8 @@ var myQuestions = [
         question: "A ___ is a container for storing data or data values.",
         answers: {
             a: 'function',
-            b: 'operator',
-            c: 'variable'
+			b: 'operator',
+			c: 'variable'
         },
         correctAnswer: 'c'
     },
@@ -22,8 +27,8 @@ var myQuestions = [
         question: "Which symbol is used to invoke a function?",
         answers: {
             a: '()',
-            b: '{}',
-            c: '[]'
+			b: '{}',
+			c: '[]'
         },
         correctAnswer: 'a'
     },
@@ -31,8 +36,8 @@ var myQuestions = [
         question: "What is one way to loop through an array?",
         answers: {
             a: 'const loop',
-            b: 'let loop',
-            c: 'for loop'
+			b: 'let loop',
+			c: 'for loop'
         },
         correctAnswer: 'c'
     },
@@ -40,32 +45,25 @@ var myQuestions = [
         question: "Which operator is defined as equal to?",
         answers: {
             a: '===',
-            b: '==',
-            c: '>='
+			b: '==',
+			c: '>='
         },
         correctAnswer: 'b'
     }
 ];
 
-// How to make timer shown in window?
-// var timer = setInterval(function() {}, 1000);
-
-// function setTime() {
-// 	var timerInterval = setInterval(function() {
-// 		secondsLeft--;
-// 		timerInterval.textContent = secondsLeft;
-
-// 		if(secondsLeft === 0) {
-// 			clearInterval(timerInterval);
-// 			sendMessage();
-// 		}
-
-// 	}, 1000);
-// }
-
 // functions to generate the quiz for the user to complete
 function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 
+	startBtn.onclick = ()=>{
+		// infoBox.classList.remove('hidden');
+		document.getElementById('quiz').classList.remove('hidden');
+	}
+
+	// continueBtn.onclick = ()=>{
+	// 	document.getElementById('quiz').classList.remove('hidden');
+	// }
+	
 	function showQuestions(questions, quizContainer){
 		// place to store the output and the answer choices
 	    var output = [];
@@ -84,16 +82,17 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 			    answers.push(
 				    '<label>'
 					    + '<input type="radio" name="question'+i+'" value="'+letter+'">'
-					    + letter + ': '
+					    + letter 
+						+ ': '
 					    + questions[i].answers[letter]
-				    + '</label>'
+				    	+ '</label>'
 			    );
 		    }
         
 		    // add this question and its answers to the output
 		    output.push(
 			    '<div class="question">' + questions[i].question + '</div>'
-			    + '<div class="answers">' + answers.join('') + '</div>'
+			    + '<div class="answers">' + answers.join(' ') + '</div>'
 		    );
 	    }
 
@@ -122,7 +121,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 			    numCorrect++;
 			
 			    // color the answers green
-			    answerContainers[i].style.color = 'lightgreen';
+			    answerContainers[i].style.color = 'green';
 		    }
 		    // if answer is wrong or blank
 		    else{
